@@ -8,6 +8,7 @@ public class Test {
         System.out.println(bankService.getAccountList());
         System.out.println(bankService.getAccountListSortByBalance());
         System.out.println(bankService.getAccountListSortByUserSeq());
+        
     }
 
 }

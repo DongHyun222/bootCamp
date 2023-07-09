@@ -10,7 +10,7 @@ public class BookStoreExam {
 		MemberDto m = bsSvc.getMemberDetail(100);
 		System.out.println(m);
 		
-		//과제에서 첫번째 getAccountList
+		//과제에서 두번째 getAccountList
 		ArrayList<SaleDto> saleList = bsSvc.getSaleList(100);
 		System.out.println(saleList);
 		

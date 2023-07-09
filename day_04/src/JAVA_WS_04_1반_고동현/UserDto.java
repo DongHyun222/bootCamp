@@ -1,6 +1,6 @@
 package JAVA_WS_04_1반_고동현;
 
-public class UserDto {
+public class UserDto implements Comparable<UserDto>{
 	private int userSeq;
 	private String name;
 	private String email;
@@ -59,6 +59,11 @@ public class UserDto {
 		this.isSleep = isSleep;
 	}
 
+	@Override
+	public int compareTo(UserDto o) {
+		return this.userSeq - o.userSeq;
+	}
+	
 	@Override
 	public String toString() {
 		return "UserDto [userSeq=" + userSeq + ", name=" + name + ", email=" + email + ", phone=" + phone + ", isSleep="

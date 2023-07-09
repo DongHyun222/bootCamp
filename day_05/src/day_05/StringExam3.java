@@ -24,6 +24,7 @@ public class StringExam3 {
 		sb.toString();
 		long end2 = System.currentTimeMillis();		
 		System.out.println("실행시간2: " + (end2-start2));
+		//asdfasdfsadfasdf
 		
 		
 	}

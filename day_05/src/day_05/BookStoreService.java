@@ -33,6 +33,7 @@ public class BookStoreService {
 		return null;
 	}
 	/**특정 회원이 구매한 판매목록*/
+	//과제 getAccountList
 	public ArrayList<SaleDto> getSaleList(int memberno){
 		ArrayList<SaleDto> result = new ArrayList<SaleDto>();
 		for (SaleDto s : saleList) {
@@ -55,6 +56,7 @@ public class BookStoreService {
 		return bookList;
 	}
 
+	
 	public ArrayList<SaleDto> getSaleListSortByQuantity() {
 		QuantityCompararator qc = new QuantityCompararator();
 		

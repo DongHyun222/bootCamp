@@ -9,23 +9,23 @@ public class DrawExam {
 		//Shape{ x, y }
 		//Line extens Shape {x2, y2}
 		//Circle extens Shape { radius }
-		
-		Line[] lines = new Line[100];
-		int lineCount = 0;
-		Circle[] circles = new Circle[100];
-		int circleCount = 0;
-		
-		lines[lineCount++] = new Line(...);
-		circles[circleCount++] = new Circle(...);
-		circles[circleCount++] = new Circle(...);
-		lines[lineCount++] = new Line(...);
-		
-		Shape[] sarr = new Shape[100];
-		int shapeCount = 0;
-		sarr[shapeCount++] = new Line(...);
-		sarr[shapeCount++] = new Circle(...);
-		sarr[shapeCount++] = new Circle(...);
-		sarr[shapeCount++] = new Line(...);
+//		
+//		Line[] lines = new Line[100];
+//		int lineCount = 0;
+//		Circle[] circles = new Circle[100];
+//		int circleCount = 0;
+//		
+//		lines[lineCount++] = new Line(...);
+//		circles[circleCount++] = new Circle(...);
+//		circles[circleCount++] = new Circle(...);
+//		lines[lineCount++] = new Line(...);
+//		
+//		Shape[] sarr = new Shape[100];
+//		int shapeCount = 0;
+//		sarr[shapeCount++] = new Line(...);
+//		sarr[shapeCount++] = new Circle(...);
+//		sarr[shapeCount++] = new Circle(...);
+//		sarr[shapeCount++] = new Line(...);
 		
 	}
 }

@@ -1,7 +1,5 @@
 package JAVA_WS_04_1반_고동현;
 
-import day_04.MyMember;
-
 public class AccountDto implements Comparable<AccountDto>{
 	private int accountSeq;
 	private String accountNumber;
