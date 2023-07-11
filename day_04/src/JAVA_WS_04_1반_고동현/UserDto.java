@@ -59,15 +59,21 @@ public class UserDto implements Comparable<UserDto>{
 		this.isSleep = isSleep;
 	}
 
-	@Override
-	public int compareTo(UserDto o) {
-		return this.userSeq - o.userSeq;
-	}
+//	@Override
+//	public int compareTo(UserDto o) {
+//		return this.userSeq - o.userSeq;
+//	}
 	
 	@Override
 	public String toString() {
 		return "UserDto [userSeq=" + userSeq + ", name=" + name + ", email=" + email + ", phone=" + phone + ", isSleep="
 				+ isSleep + "]";
+	}
+
+	@Override
+	public int compareTo(UserDto o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

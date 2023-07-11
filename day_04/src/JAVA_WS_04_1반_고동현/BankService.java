@@ -9,7 +9,7 @@ public class BankService {
 	
 	public BankService() {
 		accountList.add(new AccountDto(200, "444", 1, 22222));
-		accountList.add(new AccountDto(333, "345", 1, 33333));
+		accountList.add(new AccountDto(333, "345", 2, 33333));
 		accountList.add(new AccountDto(100, "123", 1, 11111));
 		accountList.add(new AccountDto(111, "245", 1, 11111));
 		
@@ -65,9 +65,17 @@ public class BankService {
 	}
 	
 	//6번째
-	public ArrayList<UserDto> getAccountListSortByUserSeq() {
-		Collections.sort(userList);
-		return userList;
+	public ArrayList<AccountDto> getAccountListSortByUserSeq() {
+		userSeqComparator uC = new userSeqComparator();
+		
+		Collections.sort(accountList, uC);
+		
+		return accountList;
 	}
+//	public ArrayList<UserDto> getAccountListSortByUserSeq() {
+//		Collections.sort(userList);
+//		return userList;
+//	}
+
 		
 }
