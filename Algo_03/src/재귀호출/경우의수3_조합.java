@@ -1,6 +1,6 @@
 package 재귀호출;
 
-public class 경우의수3 {//숫자는 1번씩 사용됨, 2개 숫자만 추출
+public class 경우의수3_조합 {//숫자는 1번씩 사용됨, 2개 숫자만 추출
 	static int[] arr;
 	static int[] result;
 	static int n;
