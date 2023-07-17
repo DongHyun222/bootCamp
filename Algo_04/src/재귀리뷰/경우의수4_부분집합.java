@@ -30,7 +30,7 @@ public class 경우의수4_부분집합 {
     }
 
     static void bit() {		//1 << n(3) 의 값은 1000이므로 8이됨
-        for (int i = 0; i < 1 << n; i++) {
+        for (int i = 1; i < 1 << n; i++) {
 //        	System.out.print("i="+i+ " ");
             for (int j = 0; j < n; j++) {
             			//j가 가르키는 것은 추출할 자리인가

@@ -14,7 +14,7 @@ public class 경우의수3 {
 		n = 2;				//출력할 숫자조합 길이 
 		result = new int[n];		//정답 저장할 배열
 		
-		recur(0, 0);	//깊이 0 , 시작위치 0 전달
+		recur(0, 0);	//깊이 0, 시작위치 0 전달
 		
 	}
 	private static void recur(int depth, int start) {

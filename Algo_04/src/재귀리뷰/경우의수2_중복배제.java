@@ -1,7 +1,7 @@
 package 재귀리뷰;
 
 //중복배제
-public class 경우의수2 {
+public class 경우의수2_중복배제 {
 	static int[] arr;	//원소
 	static boolean[] visited;
 	static int n;		//답의 길이
@@ -34,7 +34,7 @@ public class 경우의수2 {
 	//답출력
 	private static void printResult() {
 		for (int i : result) {
-			System.out.print(i);
+			System.out.print(i+ " ");
 		}
 		System.out.println();
 	}
