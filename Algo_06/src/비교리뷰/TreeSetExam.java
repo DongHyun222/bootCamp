@@ -18,5 +18,10 @@ public class TreeSetExam {
 		hs.add(200);
 		arr = new ArrayList<Integer>(hs);
 		System.out.println(arr);
+		
+		System.out.println(true&&false||true&&true);
+		String[] asd = {"asd", "/", "123"};
+
+		System.out.println(asd[1].charAt(0)<'0');
 	}
 }
