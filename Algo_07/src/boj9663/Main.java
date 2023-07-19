@@ -15,7 +15,7 @@ public class Main {	//백준 9663, swea2806
 		nQueen(0);
 		System.out.println(count);
 	}
-
+	
 	private static void nQueen(int depth) {
 		if (depth == N) {
 			count += 1;
@@ -30,7 +30,7 @@ public class Main {	//백준 9663, swea2806
 			}
 		}
 	}
-
+	
 	private static boolean Possibility(int depth) {
 		for (int i = 0; i < depth; i++) {
 			if (arr[depth] == arr[i]) {
@@ -38,7 +38,7 @@ public class Main {	//백준 9663, swea2806
 			} else if (Math.abs(depth-i) == Math.abs(arr[depth]-arr[i])) {
 				return false;
 			}
-		} 
+		}
 		return true;
 	}
 }
