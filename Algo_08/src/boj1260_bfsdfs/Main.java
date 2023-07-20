@@ -1,4 +1,4 @@
-package boj1260;
+package boj1260_bfsdfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
