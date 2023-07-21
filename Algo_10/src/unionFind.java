@@ -1,11 +1,9 @@
-package boj1717;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class unionFind {
 	static int[] parent;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,7 +31,6 @@ public class Main {
 					System.out.println("NO");
 			}
 		}
-//		System.out.println("FINAL" + find(1)+" "+find(2)+" " + find(3)+ " " + find(4) + " " +find(5) + " " +find(6));
 	}
 	private static void union(int a, int b) {
 		a = find(a);
@@ -44,10 +41,6 @@ public class Main {
 			} else
 				parent[a] = b;
 		}
-//		System.out.println("***************");
-//		System.out.println(a + "-" + find(a));
-//		System.out.println(b + "-" + find(b));
-//		System.out.println("***************");
 	}
 	private static int find(int a) {
 		if (a == parent[a])
