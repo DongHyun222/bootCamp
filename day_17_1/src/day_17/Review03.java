@@ -24,6 +24,6 @@ public class Review03 {
 	}
 	
 	static void a(int a) {}
-//	static void a(int b) {} 오류
+//	static void a(int b) {} //오류
 	static void a(int a, int b) {} 
 }

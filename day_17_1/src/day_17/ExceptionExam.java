@@ -5,12 +5,13 @@ import java.io.FileReader;
 
 public class ExceptionExam {
 	public static void main(String[] args) {
-		try {
-			readFile2();
-			System.out.println("파일처리성공");
-		} catch (FileNotFoundException e) {
-			System.err.println("파처실");
-		}
+//		try {
+//			readFile2();
+//			System.out.println("파일처리성공");
+//		} catch (FileNotFoundException e) {
+//			System.err.println("파처실");
+//		}
+		readFile();
 	}
 	
 	private static void readFile() {
