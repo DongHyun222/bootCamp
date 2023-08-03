@@ -25,7 +25,7 @@ public class WorkShop {
 		LibType i = libScv.findItemByTitle("자바기본");
 		System.out.println(i);
 		
-		libScv.rent( i.getLibNumber(), m.getId(), "20230726",13,7,1 );
+//		libScv.rent( i.getLibNumber(), m.getId(), "20230726",13,7,1 );
 		
 		
 	}

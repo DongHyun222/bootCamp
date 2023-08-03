@@ -63,9 +63,19 @@ public class LibraryService {
 		}
 		return null;
 	}
-
+	
+	public LibType findItemByItem(String string) {
+		for (LibType libType : libs) {
+			if (libType.getLibName() == string) {
+				return libType;
+			}
+		}
+		return null;
+	}
+	
+	
 	public void rent(int libNumber, String id, String startDate, int startHour, int startMinute, int LibCount) 
-			throws {
+			throws 미등록물건Exception, 미등록회원idException, 수량부족Exception{
 		
 	}
 }
