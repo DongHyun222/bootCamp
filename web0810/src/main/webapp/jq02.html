@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jq01.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	var count = 0
+	var colors = ["red", "green", "blue"]
+	let interval_id = null
+	function click_start() {
+		interval_id = setInterval("increase()", 1000)
+		
+	}
+	function click_stop() {
+		clearInterval(interval_id)
+		interval_id = null
+	}
+	
+	function increase() {
+		count ++
+		//$("button").html(count)
+		$(".btn").html(count)
+		$(".btn").css("background",colors[count%3])
+	}
+	
+	$(function(){ //1초마다 버튼의 배경색을 colors의 색깔로 돌아가면서 지정하는 코드 작성
+		$("button").css("color", "black")
+		//setTimeout("alert('OK')", 2000)
+		$("#start").click(click_start)
+		$("#stop").click(click_stop)
+	})
+</script>
+</head>
+<body>
+	
+	<button id="start">START</button>
+	<button id="stop">STOP</button>
+	<br>
+	<button class="btn">OK 1</button>
+	<button class="btn">OK 2</button>
+	<button class="btn">OK 3</button>
+
+</body>
+</html>

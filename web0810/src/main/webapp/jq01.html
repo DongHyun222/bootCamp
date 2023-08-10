@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jq01.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	let count = 0
+	//jquery는 무조건 $로 시작
+	//$(function(){ //페이지 열리자마자 자동실행하는 함수
+		//$("button").html("jQuery")
+	//}) 
+	
+	$(function(){ //페이지 열리자마자 자동실행하는 함수
+		$("button").click(function(){
+			count++
+			alert(count)
+		})
+	}) 
+	
+	//window.onload = function() {
+		//$("button").html("Finish")	//버튼태그 내용을 Finish로변경
+	//}
+</script>
+</head>
+<body>
+
+	<button>OK 1</button>
+	<button>OK 2</button>
+	<button>OK 3</button>
+
+</body>
+</html>
