@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Form 01</title>
+	</head>
+	
+	<body>
+		<button>버튼1</button>
+		
+		<form action="form_check.jsp" method="POST"> <!--action=""생략 하면 자기자신을 처음에 받음-->
+			<input type="hidden" name="no" value="30"> <!--autofocus는 홈페이지 열리자 마자 입력 커서 가있음-->
+			이름 : <input type="text" name="nm" autofocus><br> <!--name 빼먹으면 홈페이지주소에 입력값이 안들어감--> 
+			비밀번호 : <input type="password" name="pwd" value="1234"><br>
+			주소 : <input type="search" name="addr" placeholder="주소를 입력하세요" required><br>
+			성별 : 남<input type="radio" name="gender" value="male"> <!--하나만 선택-->
+				  여<input type="radio" name="gender" value="female"><br>
+			좋아하는 운동 : <!--여러개 선택 가능-->
+				<input type="checkbox" name="fav_sports" value="pingpong">탁구 
+				<input type="checkbox" name="fav_sports" value="golf">골프
+				<br>
+			회비 : <input type="number" ><br>
+			부서선택 : 
+			<select name="dept" >
+				<option value="000">부서를 선택하세요</option>
+				<option value="100">기획부</option>
+				<option value="200">영업부</option>
+				<option value="300">개발부</option>
+			</select><br>
+			게시물 내용 : <br><textarea rows="5" cols="60"></textarea><br>
+			<input type="submit" value="보내기">
+			<input type="reset" value="다시입력">
+		</form>
+	</body>
+</html>
