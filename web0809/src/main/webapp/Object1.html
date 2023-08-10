@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object1.html</title>
+<script>
+	//로또
+	function make_lotto() {
+		var lotto = []
+		for(let i = 0; lotto.length < 6; i++) {
+			var r = Math.floor(Math.random() * 45 + 1)
+			if(lotto.indexOf(r) == -1)
+				lotto.push(r)
+		}
+		lotto.sort()
+		alert(lotto.length + "개, " +lotto.join('-'))
+	}
+	make_lotto()
+	location = "http://naver.com" //최종 주소로 이동함
+</script>
+</head>
+<body>
+	<h1>객체 연습</h1>
+</body>
+</html>
