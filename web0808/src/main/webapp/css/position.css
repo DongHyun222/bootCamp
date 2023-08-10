@@ -1,0 +1,6 @@
+@charset "UTF-8";
+div {border: 1px solid black; width: 100px; height: 100px;}
+	#d1 {background-color: yellowgreen;}
+	#d2 {background-color: aquamarine;}
+	#d3 {background-color: beige;}
+	#outer {}

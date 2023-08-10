@@ -1,0 +1,10 @@
+@charset "UTF-8";		
+
+
+#footer{
+	float:right;
+}
+
+#footer ul{
+	list-style: none;
+}

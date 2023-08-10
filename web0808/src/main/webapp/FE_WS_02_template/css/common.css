@@ -1,0 +1,14 @@
+#banner {
+	display: flex; /* Flex 컨테이너로 설정 */
+	background-color: darkslateblue; 
+	color: white;
+	height: 100px;
+	font-size: 25px;
+	/*vertical-align : middle; 컨테이너로 설정하면 이거 필요가 없다*/
+	align-items: center; /* 세로 방향 가운데 정렬 */
+	justify-content: center; /* 가로 방향 가운데 정렬 */
+}
+
+/*#container {
+	background-color: aquamarine;
+}*/
