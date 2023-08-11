@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax_exam_3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#get_data").click(function() {
+			let options = {
+				url : "data.xml", 
+				dataType : "xml",
+				success:function(data){
+					let sc = $(data).find("score")
+					sc.each(function(idx, v){ //v는 태그객체, (<score>80</score>)
+						let t = $(v).text() //score의 숫자 추출, $를 쓰면 jquery객체를 javascript객체로
+						// let t = v.innerHTML 아니면 이렇게 써도됨
+						$("#result").append(t + ", " )
+					})
+				}
+			}
+			$.ajax(options)
+		})
+	})
+</script>
+</head>
+<body>
+	
+	<button id="get_data">가져오기</button>
+	<div id="result"></div>
+	
+</body>
+</html>
