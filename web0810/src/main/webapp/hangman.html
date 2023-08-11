@@ -7,20 +7,79 @@
 	
 </script>
 <style>
-	#field{
-		width: 500px; 
-		border: 3px solid black;
+	body{
 		margin : 0 auto;
 		text-align: center;
 	}
+	#field{
+		width: 400px; 
+		border: 3px solid black;
+		margin : 0 auto;
+	}
+	.alphabet-button {
+		display: inline-block;
+		margin: 5px;
+		padding: 5px 10px;
+		border: 1px solid black;
+		cursor: pointer;
+	}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	const words = ["apple", "banana", "cherry", "grape", "orange", "pear"];
+	var selectedWord = ""
+	var ans = []
+	var remainchances = 6;
+	var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
+	'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+	
+	function initGame() {
+		selectedWord = words[Math.floor(Math.random() * words.length)]
+		ans = []
+		remainchances = 6
+		
+		updateDisplay()
+	}
+	
+	
+	
+	function init_alpha() {
+		let field = $("#alphabet")
+		//필드 내 모든 태그를 삭제
+		field.empty() // 태그 내 모든 자식 삭제
+		
+		for(let index = 0; index < alphabet.length; index++){
+			let letter = alphabet[index];
+			let button = $("<button>")
+				.addClass("alphabet-button")	//CSS클래스 추가
+				.text(letter)	//버튼에 알파벳 텍스트 설정
+				.attr("data-letter", letter)	//"data-letter" 속성에 알파벳 저장
+				.click(function() {	//버튼 클릭할때 실행될 함수 설정
+					click(letter);
+				})
+			field.append(button);
+		}
+	}
+	
+	function click(letter) {
+		$(event.target).css("background-color", "yellow");
+	}
+	
+	$(function() {
+		init_alpha()
+	})
+</script>
 </head>
 <body>
+	<h1>HangMan - Category : fruits</h1>
 	<div id="field">
-		<h1>HangMan</h1>
-		<p>Category : fruits</p>
+		<p></p>
+		<div id="word-display"></div>
 		<hr>
-		
+		<div id="alphabet"></div>
 	</div>
+	<!--<script> 위에서 말고 아래에서 실행해도 댐
+		init_alpha()
+	</script>-->
 </body>
 </html>
