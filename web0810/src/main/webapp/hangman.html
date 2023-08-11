@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>HangMan</title>
-<script>
-	
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <style>
-	body{
-		margin : 0 auto;
+	body {
+		margin: 0 auto;
 		text-align: center;
 	}
-	#field{
+	#field {
 		width: 400px; 
 		border: 3px solid black;
-		margin : 0 auto;
+		margin: 0 auto;
 	}
 	.alphabet-button {
 		display: inline-block;
@@ -24,50 +22,73 @@
 		cursor: pointer;
 	}
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
 	const words = ["apple", "banana", "cherry", "grape", "orange", "pear"];
-	var selectedWord = ""
-	var ans = []
-	var remainchances = 6;
-	var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
-	'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-	
+	let selectedWord = "";
+	let guessedLetters = [];
+	let remainChances = 6;
+
 	function initGame() {
-		selectedWord = words[Math.floor(Math.random() * words.length)]
-		ans = []
-		remainchances = 6
-		
+		selectedWord = words[Math.floor(Math.random() * words.length)];
+		guessedLetters = []
+		remainChances = 6
 		updateDisplay()
 	}
-	
-	
-	
+
+	function updateDisplay() {
+		const wordDisplay = document.getElementById("word-display");
+		let displayedWord = ""
+		for (let i = 0; i < selectedWord.length; i++) {
+		    let letter = selectedWord[i]
+		    if (guessedLetters.includes(letter)) {
+		        displayedWord += letter;
+		    } else {
+		        displayedWord += "_"
+		    }
+		    displayedWord += " "
+		}
+		wordDisplay.textContent = displayedWord;
+	}
+
 	function init_alpha() {
-		let field = $("#alphabet")
-		//필드 내 모든 태그를 삭제
-		field.empty() // 태그 내 모든 자식 삭제
+		let field = $("#alphabet");
+		field.empty();
 		
-		for(let index = 0; index < alphabet.length; index++){
-			let letter = alphabet[index];
+		for (let index = 0; index < 26; index++) { // 알파벳 개수만큼 반복
+			let letter = String.fromCharCode(97 + index); // 알파벳 문자 생성
+			
 			let button = $("<button>")
-				.addClass("alphabet-button")	//CSS클래스 추가
-				.text(letter)	//버튼에 알파벳 텍스트 설정
-				.attr("data-letter", letter)	//"data-letter" 속성에 알파벳 저장
-				.click(function() {	//버튼 클릭할때 실행될 함수 설정
+				.addClass("alphabet-button")
+				.text(letter)
+				.attr("data-letter", letter)
+				.click(function() {
 					click(letter);
-				})
+				});
 			field.append(button);
 		}
 	}
-	
+
 	function click(letter) {
-		$(event.target).css("background-color", "yellow");
+		if (!guessedLetters.includes(letter)) {
+			guessedLetters.push(letter);
+			$(event.target).css("background-color", "yellow");
+			updateDisplay();
+		}
+		
+		let count = $("#life") {
+			
+		}
+		
+		mainChances--;
+		if (remainChances == 0) {
+			alert("땡");
+		}
 	}
-	
+
 	$(function() {
-		init_alpha()
-	})
+		init_alpha();
+		initGame();
+	});
 </script>
 </head>
 <body>
@@ -75,11 +96,9 @@
 	<div id="field">
 		<p></p>
 		<div id="word-display"></div>
+		<div id="life"></div>
 		<hr>
 		<div id="alphabet"></div>
 	</div>
-	<!--<script> 위에서 말고 아래에서 실행해도 댐
-		init_alpha()
-	</script>-->
 </body>
 </html>
